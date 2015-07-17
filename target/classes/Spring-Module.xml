@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="helloBean" class="com.garmin.firstspring.HelloWorld" scope="">
+		
+	</bean>
+	
+	<bean id="magicMike" class="com.garmin.firstspring.Magic" >
+		
+	</bean>
+	<bean id="app" class="com.garmin.firstspring.App" scope="">
+		<constructor-arg ref="magicMike"/>
+		 
+	</bean>
+</beans>
