@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+
+	<bean id="foo" class="com.garmin.springannotations.Foo">
+		<property name="name" value="Ionel" />
+	</bean>
+	
+	<bean id="anotherFoo" class="com.garmin.springannotations.Foo">
+		<property name="name" value="Marcel"></property>
+		<qualifier value="secondaryFoo"></qualifier>
+	</bean>
+	
+	
+	<bean id="otherFoo" class="com.garmin.springannotations.Foo">
+		<property name="name" value="Mihai"></property>
+		<qualifier value="thirdFoo"></qualifier>
+	</bean>
+
+	<bean id="bar" class="com.garmin.springannotations.Bar">
+
+	</bean>
+</beans>
